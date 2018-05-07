@@ -21,7 +21,7 @@ class Validation {
     
     static func validateCount(_ count: String, availableCount: Int) -> Bool {
         let writtenCount = count.isEmpty ? "0" : count
-        if availableCount - Int(writtenCount)! < 0 || count.count < 1 {
+        if availableCount - Int(writtenCount)! < 0 || count.count < 1 || count == "0" {
             return false
         }
         return true
