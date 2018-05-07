@@ -1,0 +1,35 @@
+PODS:
+  - Realm (3.5.0):
+    - Realm/Headers (= 3.5.0)
+  - Realm/Headers (3.5.0)
+  - RealmSwift (3.5.0):
+    - Realm (= 3.5.0)
+  - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.2)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - RealmSwift
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
+  - SVProgressHUD
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Realm
+    - RealmSwift
+    - RxCocoa
+    - RxSwift
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Realm: 0378021c424e4e2bd6a0e63b27881e929d9b9ad1
+  RealmSwift: 3322562622fda2ad596985ead4d8d8be30cf838c
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 3b64f10bbb61645eee33e5c8c72c0b843583c8d7
+
+COCOAPODS: 1.5.0

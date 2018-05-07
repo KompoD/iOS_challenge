@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sell Detail View Controller-->
+        <scene sceneID="8nv-Su-taJ">
+            <objects>
+                <viewController storyboardIdentifier="sellDetailVC" hidesBottomBarWhenPushed="YES" id="Pn3-hP-7mF" customClass="SellDetailViewController" customModule="ios_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n0j-ec-kK3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Наименование:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b90-T8-Qcu">
+                                <rect key="frame" x="16" y="52" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DhL-ma-PEx">
+                                <rect key="frame" x="147" y="47" width="212" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Доступное кол-во:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUn-SE-yNF">
+                                <rect key="frame" x="16" y="100" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WAg-3y-lck">
+                                <rect key="frame" x="172" y="95" width="187" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dnb-cH-Ocd">
+                                <rect key="frame" x="159" y="152" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="H6R-mm-Sha"/>
+                                    <constraint firstAttribute="height" constant="40" id="OoT-9f-Clj"/>
+                                </constraints>
+                                <state key="normal" title="Сохранить">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="Pn3-hP-7mF" eventType="touchUpInside" id="K8X-AW-zWx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dUn-SE-yNF" firstAttribute="top" secondItem="b90-T8-Qcu" secondAttribute="bottom" constant="27" id="2lp-BX-ylk"/>
+                            <constraint firstItem="WAg-3y-lck" firstAttribute="centerY" secondItem="dUn-SE-yNF" secondAttribute="centerY" id="2tp-WF-4AF"/>
+                            <constraint firstItem="ciq-nt-vHh" firstAttribute="trailing" secondItem="DhL-ma-PEx" secondAttribute="trailing" constant="16" id="IjU-2h-yLQ"/>
+                            <constraint firstItem="Dnb-cH-Ocd" firstAttribute="trailing" secondItem="WAg-3y-lck" secondAttribute="trailing" id="LjZ-M3-weJ"/>
+                            <constraint firstItem="DhL-ma-PEx" firstAttribute="centerY" secondItem="b90-T8-Qcu" secondAttribute="centerY" id="S5d-AT-rG0"/>
+                            <constraint firstItem="WAg-3y-lck" firstAttribute="leading" secondItem="dUn-SE-yNF" secondAttribute="trailing" constant="6" id="foo-YX-Fo9"/>
+                            <constraint firstItem="DhL-ma-PEx" firstAttribute="leading" secondItem="b90-T8-Qcu" secondAttribute="trailing" constant="6" id="kOG-ed-M1R"/>
+                            <constraint firstItem="b90-T8-Qcu" firstAttribute="top" secondItem="ciq-nt-vHh" secondAttribute="top" constant="32" id="mRu-3b-9dg"/>
+                            <constraint firstItem="dUn-SE-yNF" firstAttribute="leading" secondItem="b90-T8-Qcu" secondAttribute="leading" id="qMe-fg-ESy"/>
+                            <constraint firstItem="Dnb-cH-Ocd" firstAttribute="top" secondItem="WAg-3y-lck" secondAttribute="bottom" constant="27" id="ufK-Cj-XmG"/>
+                            <constraint firstItem="ciq-nt-vHh" firstAttribute="trailing" secondItem="WAg-3y-lck" secondAttribute="trailing" constant="16" id="xdG-SA-mcF"/>
+                            <constraint firstItem="b90-T8-Qcu" firstAttribute="leading" secondItem="ciq-nt-vHh" secondAttribute="leading" constant="16" id="zLS-Tw-I4T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ciq-nt-vHh"/>
+                    </view>
+                    <connections>
+                        <outlet property="countField" destination="WAg-3y-lck" id="7li-E2-f2N"/>
+                        <outlet property="productNameField" destination="DhL-ma-PEx" id="Jet-7S-qQi"/>
+                        <outlet property="saveButton" destination="Dnb-cH-Ocd" id="nQM-J3-kxS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lCe-LL-BV2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63.200000000000003" y="124.58770614692655"/>
+        </scene>
+    </scenes>
+</document>

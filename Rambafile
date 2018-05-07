@@ -1,0 +1,23 @@
+### Headers settings
+company: Nikita Merkel
+
+### Xcode project settings
+project_name: ios_challenge
+xcodeproj_path: ios_challenge.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: ios_challenge
+
+# The file path for new modules
+project_file_path: ios_challenge/Modules
+
+# The Xcode group path to new modules
+project_group_path: ios_challenge/Modules
+
+### Dependencies settings section
+podfile_path: Podfile
+
+### Templates
+templates:
+- {name: ofk_viper, local: '/Users/kompod/Documents/XCode Projects/vipermodule'}

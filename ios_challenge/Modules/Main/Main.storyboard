@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KGc-3A-Yjt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Продать-->
+        <scene sceneID="F40-xs-Q95">
+            <objects>
+                <viewController id="rht-3W-SaM" customClass="SellViewController" customModule="ios_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t5A-dV-tsP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Sfx-jL-MNG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="rht-3W-SaM" id="HRh-yx-OcR"/>
+                                    <outlet property="delegate" destination="rht-3W-SaM" id="FlU-eV-f4L"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sfx-jL-MNG" firstAttribute="leading" secondItem="8PR-bn-vVF" secondAttribute="leading" id="Tpo-zf-Mis"/>
+                            <constraint firstItem="Sfx-jL-MNG" firstAttribute="top" secondItem="8PR-bn-vVF" secondAttribute="top" id="X8f-R8-Fwf"/>
+                            <constraint firstItem="Sfx-jL-MNG" firstAttribute="trailing" secondItem="8PR-bn-vVF" secondAttribute="trailing" id="wNn-8L-B8d"/>
+                            <constraint firstItem="Sfx-jL-MNG" firstAttribute="bottom" secondItem="8PR-bn-vVF" secondAttribute="bottom" id="xKl-ZV-jz7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8PR-bn-vVF"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Продать" id="i27-Yc-Ti7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Vpd-EA-lle">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="rht-3W-SaM" id="WAc-WV-Kz4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Sfx-jL-MNG" id="TDn-O6-coS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wic-a7-sVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1468" y="519.49025487256381"/>
+        </scene>
+        <!--Купить-->
+        <scene sceneID="rJJ-R0-JqT">
+            <objects>
+                <viewController id="rZ2-Bh-6OX" customClass="BuyViewController" customModule="ios_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EWN-BB-LSA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="PEE-Tg-CsS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="rZ2-Bh-6OX" id="iXe-iN-u0f"/>
+                                    <outlet property="delegate" destination="rZ2-Bh-6OX" id="YRG-Uh-Vlb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PEE-Tg-CsS" firstAttribute="top" secondItem="TZ1-Rs-sDR" secondAttribute="top" id="ReZ-OJ-Gal"/>
+                            <constraint firstItem="PEE-Tg-CsS" firstAttribute="trailing" secondItem="TZ1-Rs-sDR" secondAttribute="trailing" id="WUe-ny-SG0"/>
+                            <constraint firstItem="PEE-Tg-CsS" firstAttribute="bottom" secondItem="TZ1-Rs-sDR" secondAttribute="bottom" id="h9z-Z6-kkw"/>
+                            <constraint firstItem="PEE-Tg-CsS" firstAttribute="leading" secondItem="TZ1-Rs-sDR" secondAttribute="leading" id="lw8-YV-8MS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TZ1-Rs-sDR"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Купить" id="BbY-mL-1CG"/>
+                    <connections>
+                        <outlet property="tableView" destination="PEE-Tg-CsS" id="biZ-PI-EK2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PoR-J1-jLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1468" y="-144.3778110944528"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Wp3-Mw-YLl">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBarVC" id="KGc-3A-Yjt" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qij-9V-VeU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="VMX-MK-X8c" kind="relationship" relationship="viewControllers" id="Fkv-k6-LpI"/>
+                        <segue destination="zPZ-SV-jFA" kind="relationship" relationship="viewControllers" id="ID2-mN-ZYf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="55O-kX-c5t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-423" y="188"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="auv-Mm-WFz">
+            <objects>
+                <navigationController storyboardIdentifier="buyNavVC" automaticallyAdjustsScrollViewInsets="NO" id="VMX-MK-X8c" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="icon_buy" id="4gw-q7-oQB">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="tPC-KS-nSS">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rZ2-Bh-6OX" kind="relationship" relationship="rootViewController" id="X0z-nO-hrb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GNL-JC-nrn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="528.79999999999995" y="-144.3778110944528"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hIU-i0-LqT">
+            <objects>
+                <navigationController storyboardIdentifier="sellNavVC" automaticallyAdjustsScrollViewInsets="NO" id="zPZ-SV-jFA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="icon_sell" id="DVd-Qq-XYy">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="w8B-Zp-olt">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rht-3W-SaM" kind="relationship" relationship="rootViewController" id="Kh1-K4-Zwy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fFZ-Ht-yOW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="528.79999999999995" y="519.49025487256381"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_buy" width="25" height="25"/>
+        <image name="icon_sell" width="25" height="25"/>
+    </resources>
+</document>
