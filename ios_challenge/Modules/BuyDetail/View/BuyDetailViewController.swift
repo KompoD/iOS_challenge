@@ -34,24 +34,8 @@ class BuyDetailViewController: UIViewController {
     @IBAction func buyButtonTapped(_ sender: UIButton) {
         let productsRef = ThreadSafeReference(to: currentItem)
         let countField = Int(self.countField.text!)!
-        DispatchQueue.global(qos: .userInitiated).async {
-            let realm = try! Realm()
-            guard let item = realm.resolve(productsRef) else {
-                return
-            }
-            
-            try! realm.write {
-                if countField == item.count {
-                    realm.delete(item)
-                } else {
-                    item.count -= countField
-                }
-            }
-            DispatchQueue.main.async {
-                SVProgressHUD.showSuccess(withStatus: "Покупка успешно совершена!")
-                self.navigationController?.popViewController(animated: true)
-            }
-        }
+        
+        output.writeToRealm(count: countField, productsRef: productsRef)
     }
 }
 
@@ -59,6 +43,11 @@ extension BuyDetailViewController: BuyDetailViewInput {
     func setupInitialState() {
         setupFields()
         setupModel()
+    }
+    
+    func updateUI() {
+        SVProgressHUD.showSuccess(withStatus: "Покупка успешно совершена!")
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

@@ -7,16 +7,23 @@
 //
 
 import Foundation
+import RealmSwift
 
 protocol BuyDetailViewInput: class {
     func setupInitialState()
+    func updateUI()
 }
 
 protocol BuyDetailViewOutput {
     func viewIsReady()
+    func writeToRealm(count: Int, productsRef: ThreadSafeReference<Products>)
 }
 
-protocol BuyDetailInteractorInput {}
-protocol BuyDetailInteractorOutput: class {}
+protocol BuyDetailInteractorInput {
+    func writeToRealm(count: Int, productsRef: ThreadSafeReference<Products>)
+}
+protocol BuyDetailInteractorOutput: class {
+    func updateUI()
+}
 
 protocol BuyDetailRouterInput {}

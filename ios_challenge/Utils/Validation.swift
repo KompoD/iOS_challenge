@@ -12,11 +12,11 @@ class Validation {
     private init() {}
     
     static func validateName(_ name: String) -> Bool {
-        return name.count >= 1
+        return name.count >= 1 && name.count <= 15
     }
     
     static func validateCount(_ count: String) -> Bool {
-        return count.count >= 1 && count != "0"
+        return count.count >= 1 && count != "0" && count.count <= 15
     }
     
     static func validateCount(_ count: String, availableCount: Int) -> Bool {
